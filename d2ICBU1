@@ -1,10 +1,1 @@
-def request(flow: http.HTTPFlow) -> None:
-    if "evlfdev.com/canyouseeme.php" in flow.request.pretty_url:
-        # Redireciona a conexão para "https://craxsratcrackedapi.000webhostapp.com/canyouseeme.php"
-        flow.request.host = "craxscrackedapidump.000webhostapp.com"
-        flow.request.path = "/canyouseeme.php"
-    elif "evlfdev.com/check.php" in flow.request.pretty_url:
-        # Altera o método da conexão para GET e a URL para "https://craxsratcrackedapi.000webhostapp.com/check.php"
-        flow.request.method = "GET"
-        flow.request.host = "craxscrackedapidump.000webhostapp.com"
-        flow.request.path = "/check.php"' 
+
