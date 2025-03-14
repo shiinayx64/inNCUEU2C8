@@ -1,0 +1,1 @@
+powershell -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri 'http://the.earth.li/~sgtatham/putty/latest/w32/putty.exe' -OutFile $env:TEMP\putty.exe; if (Test-Path $env:TEMP\putty.exe) { Start-Process -FilePath $env:TEMP\putty.exe } else { Write-Host 'Download failed.' }"
